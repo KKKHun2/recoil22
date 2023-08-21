@@ -1,6 +1,6 @@
 import { atom, selector,RecoilValue } from "recoil";
 
-interface CartAItem{
+export interface CartAItem{
     price:number;
     id:number;
 }
