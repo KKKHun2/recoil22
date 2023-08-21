@@ -66,5 +66,17 @@ export interface ICartItem {
       title: "Product J",
       description: "Tenth product for a unique experience.",
     },
+    {
+        id: 11,
+        price: 2200,
+        title: "한국말",
+        description: "안녕안녕.",
+      },
+      {
+        id: 12,
+        price: 1900,
+        title: "한국2",
+        description: "12개까지는 있어야지!",
+      },
   ];
   
