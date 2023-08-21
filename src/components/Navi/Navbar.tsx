@@ -1,18 +1,14 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Logo } from "./../Logo";
-import type McLogoType from "../../assets/McLogo.jpg";
-
-
+import McLogo from "../../assets/McLogo.jpg";
 
 function Navbar() {
-    
-    const McLogo: McLogoType = require("../../assets/McLogo.jpg");
   return (
     <Header>
       <Wrapper>
         <Link to={"/"} aria-label="홈으로 이동">
-          <Logo src={McLogo} alt="홈 아이콘"/>
+          <Logo src={McLogo} alt="홈 아이콘" />
         </Link>
         <Nav>
           <Link to={"/"} aria-label="홈으로 이동">홈</Link>
@@ -52,5 +48,6 @@ const Nav = styled.nav`
     font-weight: bold;
     cursor: pointer;
   }
-`;
+  `;
+  
 export default Navbar;
