@@ -1,11 +1,11 @@
-interface CartItem {
+export interface ICartItem {
     id: number;
     price: number;
     title: string;
     description: string;
   }
   
-  export const dummyData: CartItem[] = [
+  export const dummyData: ICartItem[] = [
     {
       id: 1,
       price: 2000,
