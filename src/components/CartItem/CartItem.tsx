@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components"
 import  LogoImage from "../../assets/McLogo.jpg";
 import {useSetRecoilState} from "recoil";
-import { CartAtom } from "../../recoil/CartAtom";
-import {ICartItem} from "../../model/dummyData"
+import { CartAtom,CartAItem } from "../../recoil/CartAtom";
+
 
 interface CartItemProps {
-    data: ICartItem;
+    data: CartAItem;
   }
 
 
@@ -28,7 +28,7 @@ return (
         </ColumnWrapper>
       </div>
       <RightWrapper>
-        <Title>{`${price.toLocaleString()}원`}</Title>
+        <Title>{`${price?.toLocaleString()}원`}</Title>
         <Button onClick={removeFromCart}>삭제</Button>
       </RightWrapper>
     </Wrapper>

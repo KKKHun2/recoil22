@@ -6,7 +6,8 @@ import {
   CartAItem
 } from "../recoil/CartAtom";
 import styled from "styled-components";
-import CartItem from "./../component/CartItem/CartItem";
+import CartItem from "../components/CartItem/CartItem";
+
 
 
 function Cart() {
