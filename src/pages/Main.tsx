@@ -1,22 +1,17 @@
 import styled from "styled-components";
-import ProductCard from "./../component/ProductCard/ProductCard";
-import {dummyData} from "../model/dummyData"
+import ProductCard from "../components/ProductCard/ProductCard";
+import {dummyData} from "../model/dummyData";
+import {CartAItem} from "../recoil/CartAtom";
 
-interface CartItem {
-    id: number;
-    price: number;
-    title: string;
-    description: string;
-  }
   
 function Main() {
   return (
     <ListWrapper>
-      {dummyData.map((e:CartItem) => {
+      {dummyData.map((e:CartAItem) => {
         return (
-          <li key={e.id}>
+          <ProductCardWrapper key={e.id}>
             <ProductCard data={e} />
-          </li>
+          </ProductCardWrapper>
         );
       })}
     </ListWrapper>
@@ -24,10 +19,15 @@ function Main() {
 }
 const ListWrapper = styled.ul`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
   justify-content: center;
   gap: 8px;
+`;
+
+const ProductCardWrapper = styled.li`
+  list-style: none; 
 `;
 
 export default Main;
